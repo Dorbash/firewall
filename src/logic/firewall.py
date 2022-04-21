@@ -28,8 +28,8 @@ class Firewall:
         known_attacks = await self._postgres_client.get_known_attacks()
         permutations = self._window(packets, 3)
         for permutation in permutations:
-            network_signature = "".join([packet.data for packet in permutation]).encode()
-            attack = [attack for attack in known_attacks if attack.signature() == network_signature]
+            network_signature = "".join([packet.data for packet in permutation])
+            attack = [attack for attack in known_attacks if attack.name == network_signature]
             if attack:
                 return attack[0]
         return None
