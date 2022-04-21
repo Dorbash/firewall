@@ -1,8 +1,7 @@
-from dataclasses import dataclass
+from pydantic import BaseModel
 
 
-@dataclass
-class Connection:
+class Connection(BaseModel):
     source: str
     dest: str
     cpu: float

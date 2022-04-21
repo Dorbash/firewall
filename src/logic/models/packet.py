@@ -1,9 +1,9 @@
-from dataclasses import dataclass
 from typing import Literal
 
+from pydantic import BaseModel
 
-@dataclass
-class Packet:
+
+class Packet(BaseModel):
     uid: int
-    signature: bytes
+    data: str
     protocol: Literal['http', 'https']

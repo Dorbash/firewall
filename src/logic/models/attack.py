@@ -1,8 +1,7 @@
-from dataclasses import dataclass
+from pydantic import BaseModel
 
 
-@dataclass
-class Attack:
+class Attack(BaseModel):
     name: str
     severity: int
 
