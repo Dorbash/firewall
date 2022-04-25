@@ -1,0 +1,17 @@
+[
+  {
+    "uid": 1,
+    "data": "Remote",
+    "protocol": "http"
+  },
+  {
+    "uid": 2,
+    "data": "Code",
+    "protocol": "http"
+  },
+  {
+    "uid": 3,
+    "data": "Execution",
+    "protocol": "http"
+  }
+]
